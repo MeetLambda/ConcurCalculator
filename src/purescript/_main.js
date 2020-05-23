@@ -17,7 +17,7 @@ function main () {
         However, you will need to change the type to accept variables, by default it is an Effect.
         You will probably want to make it a function from String -> Effect ()
     */
-
+   console.log('Running app');
     Main.main();
 }
 
@@ -29,6 +29,5 @@ function main () {
 //     });
 // }
 
-console.log('Starting app');
-
-main();
+console.log('Loading app');
+window.onload = main;
