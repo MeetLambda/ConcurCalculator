@@ -13,24 +13,22 @@ import Concur.React (HTML)
 
 import Widgets.Calc as Calc
 
--- main :: Effect Unit
--- main = do
---     log "Ciao"
---     runWidgetInDom "app" $ orr
---         [ widget Calc.widget "Calcolatrice" ]
---     log "Ciao Ciao"
---     where
---         widget w s = orr
---             [ hr'
---             , h2_ [] $ text s
---             , div_ [] w
---             ]
-
-hello :: forall a. Widget HTML a
-hello = do   
-  _ <- button [onClick] [text "Say Hello"]
-  text "Hello Sailor!"
-
-
 main :: Effect Unit
-main = runWidgetInDom "app" hello
+main = do
+    runWidgetInDom "app" $ orr
+        [ widget Calc.widget "Calcolatrice" ]
+    where
+        widget w s = orr
+            [ hr'
+            , h2_ [] $ text s
+            , div_ [] w
+            ]
+
+-- hello :: forall a. Widget HTML a
+-- hello = do   
+--   _ <- button [onClick] [text "Say Hello"]
+--   text "Hello Sailor!"
+
+
+-- main :: Effect Unit
+-- main = runWidgetInDom "main" hello
