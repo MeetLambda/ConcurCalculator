@@ -23,12 +23,3 @@ main = do
             , h2_ [] $ text s
             , div_ [] w
             ]
-
--- hello :: forall a. Widget HTML a
--- hello = do   
---   _ <- button [onClick] [text "Say Hello"]
---   text "Hello Sailor!"
-
-
--- main :: Effect Unit
--- main = runWidgetInDom "main" hello
